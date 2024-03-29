@@ -1,7 +1,10 @@
 package sit707_tasks;
 
+import java.time.LocalDate;
+import java.time.YearMonth;
+
 /**
- * @author Ahsan Habib
+ * @author sanju nimesha
  */
 public class DateUtil {
 
@@ -84,6 +87,19 @@ public class DateUtil {
 	 * @param year
 	 * @return
 	 */
+	 public static int calculateMonthDuration(int month, int year) {
+	        YearMonth yearMonth = YearMonth.of(year, month);
+	        return yearMonth.lengthOfMonth();
+	    }
+
+	    public static void main(String[] args) {
+	        // Example usage:
+	        int currentMonth = LocalDate.now().getMonthValue();
+	        int currentYear = LocalDate.now().getYear();
+	        int duration = calculateMonthDuration(currentMonth, currentYear);
+	        System.out.println("Duration of current month: " + duration + " days");
+	    }
+	
 	public static int monthDuration(int month, int year) {		
 		if (month == 2 && year % 4 == 0) {
 			// February leap year?
