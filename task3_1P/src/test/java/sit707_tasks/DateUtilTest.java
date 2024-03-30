@@ -184,7 +184,7 @@ public class DateUtilTest {
 	    }
 
 	    @Test
-	    public void testMaxOctober31ShouldIncrementToNovember1() {
+	    public void testMaxOctober31ShouldIncrementToNovember1(){
 	        DateUtil date = new DateUtil(31, 10, 2024);
 	        System.out.println("MaxOctober31ShouldIncrementToNovember1 > " + date);
 	        date.increment();
